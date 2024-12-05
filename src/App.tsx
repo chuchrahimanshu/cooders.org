@@ -1,8 +1,13 @@
 import React from "react";
 import Router from "./Router";
+import { ThemeProvider } from "./contexts";
 
 const App: React.FC = () => {
-  return <Router />;
+  return (
+    <ThemeProvider>
+      <Router />
+    </ThemeProvider>
+  );
 };
 
 export default App;
