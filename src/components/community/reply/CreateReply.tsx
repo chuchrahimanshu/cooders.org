@@ -6,7 +6,7 @@ import React from "react";
 
 const CreateReply: React.FC = () => {
   return (
-    <form className="flex items-center justify-between gap-2 my-2 ml-[42px]">
+    <form className="flex items-center justify-between gap-2 my-2">
       <UserAvatar height="h-[35px]" width="w-[35px]" />
       <Input
         type="email"

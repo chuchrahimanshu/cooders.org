@@ -3,6 +3,7 @@ import CommentHeader from "./CommentHeader";
 import CommentBody from "./CommentBody";
 import CommentFooter from "./CommentFooter";
 import CreateReply from "../reply/CreateReply";
+import Reply from "../reply/Reply";
 
 const Comment: React.FC = () => {
   return (
@@ -10,7 +11,10 @@ const Comment: React.FC = () => {
       <CommentHeader />
       <CommentBody />
       <CommentFooter />
-      <CreateReply />
+      <section className="ml-[42px]">
+        <CreateReply />
+        <Reply />
+      </section>
     </section>
   );
 };
