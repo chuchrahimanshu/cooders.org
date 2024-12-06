@@ -4,6 +4,7 @@ import PostFooter from "./PostFooter";
 import PostHeader from "./PostHeader";
 import PostBody from "./PostBody";
 import CreateComment from "../comment/CreateComment";
+import Comment from "../comment/Comment";
 
 const Post: React.FC = () => {
   const [toggleCommentSection, setToggleCommentSection] =
@@ -15,6 +16,7 @@ const Post: React.FC = () => {
       <PostBody />
       <PostFooter setToggleCommentSection={setToggleCommentSection} />
       {toggleCommentSection && <CreateComment />}
+      <Comment />
     </Card>
   );
 };
