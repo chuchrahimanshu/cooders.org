@@ -11,7 +11,7 @@ const Post: React.FC = () => {
     useState<boolean>(false);
 
   return (
-    <Card className="border-none px-4 pt-[18px] pb-3 w-[450px]">
+    <Card className="border-none px-4 pt-[18px] pb-3 w-[480px]">
       <PostHeader />
       <PostBody />
       <PostFooter setToggleCommentSection={setToggleCommentSection} />
