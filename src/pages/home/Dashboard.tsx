@@ -8,6 +8,10 @@ const Dashboard: React.FC = () => {
       <CreatePost />
       <br />
       <Post />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

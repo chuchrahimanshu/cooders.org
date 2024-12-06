@@ -1,5 +1,4 @@
 import React from "react";
-import PostIcon from "./PostIcon";
 import {
   Bookmark,
   Heart,
@@ -7,17 +6,29 @@ import {
   Repeat,
   TextQuote,
 } from "lucide-react";
+import ButtonIcon from "@/components/global/ButtonIcon";
 
-const PostFooter: React.FC = () => {
+interface PostFooterProps {
+  setToggleCommentSection: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const PostFooter: React.FC<PostFooterProps> = ({ setToggleCommentSection }) => {
+  const handleToggleCommentSection = (): void => {
+    setToggleCommentSection((prev) => !prev);
+  };
+
   return (
     <section className="flex items-center justify-between pt-2">
       <div className="flex items-center">
-        <PostIcon Icon={Heart} />
-        <PostIcon Icon={MessageSquareText} />
-        <PostIcon Icon={Repeat} />
-        <PostIcon Icon={TextQuote} />
+        <ButtonIcon Icon={Heart} />
+        <ButtonIcon
+          Icon={MessageSquareText}
+          handleIconClicked={handleToggleCommentSection}
+        />
+        <ButtonIcon Icon={Repeat} />
+        <ButtonIcon Icon={TextQuote} />
       </div>
-      <PostIcon Icon={Bookmark} />
+      <ButtonIcon Icon={Bookmark} />
     </section>
   );
 };

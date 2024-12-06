@@ -1,15 +1,20 @@
 import { Card } from "@/components/ui/card";
-import React from "react";
+import React, { useState } from "react";
 import PostFooter from "./PostFooter";
 import PostHeader from "./PostHeader";
 import PostBody from "./PostBody";
+import CreateComment from "../comment/CreateComment";
 
 const Post: React.FC = () => {
+  const [toggleCommentSection, setToggleCommentSection] =
+    useState<boolean>(false);
+
   return (
-    <Card className="border-none px-4 pt-[18px] pb-3 w-[500px]">
+    <Card className="border-none px-4 pt-[18px] pb-3 w-[450px]">
       <PostHeader />
       <PostBody />
-      <PostFooter />
+      <PostFooter setToggleCommentSection={setToggleCommentSection} />
+      {toggleCommentSection && <CreateComment />}
     </Card>
   );
 };

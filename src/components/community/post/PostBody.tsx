@@ -18,7 +18,7 @@ const PostBody: React.FC = () => {
                 <img
                   src={`https://blog.latium.org/wp-content/uploads/2022/09/2e948896757753.5eb58c727d672-1024x708.png`}
                   alt={`Carousel Image ${index + 1}`}
-                  className="w-full h-[400px] object-cover rounded-lg"
+                  className="w-full h-[350px] object-cover rounded-lg"
                 />
               </div>
             </CarouselItem>

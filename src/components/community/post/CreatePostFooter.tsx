@@ -1,16 +1,16 @@
 import React from "react";
-import CreatePostIcon from "./CreatePostIcon";
 import { Clapperboard, Code, HandMetal, ImagePlus } from "lucide-react";
+import ButtonIcon from "@/components/global/ButtonIcon";
 
 const CreatePostFooter: React.FC = () => {
   return (
     <div className="flex items-center justify-between pt-1">
       <div className="flex items-center">
-        <CreatePostIcon Icon={ImagePlus} />
-        <CreatePostIcon Icon={Clapperboard} />
-        <CreatePostIcon Icon={Code} />
+        <ButtonIcon Icon={ImagePlus} />
+        <ButtonIcon Icon={Clapperboard} />
+        <ButtonIcon Icon={Code} />
       </div>
-      <CreatePostIcon Icon={HandMetal} />
+      <ButtonIcon Icon={HandMetal} />
     </div>
   );
 };
