@@ -13,6 +13,7 @@ import {
 } from "../ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 import SidebarHeaderItem from "../sidebar/SidebarHeaderItem";
+import SidebarFooterItem from "../sidebar/SidebarFooterItem";
 
 const GlobalSidebar: React.FC = () => {
   const items = [
@@ -67,7 +68,9 @@ const GlobalSidebar: React.FC = () => {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter />
+      <SidebarFooter>
+        <SidebarFooterItem />
+      </SidebarFooter>
     </Sidebar>
   );
 };
