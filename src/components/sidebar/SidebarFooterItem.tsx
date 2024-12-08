@@ -14,7 +14,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import UserAvatar from "../global/UserAvatar";
 import {
   BadgeCheck,
   Bell,
@@ -23,6 +22,7 @@ import {
   LogOut,
   Sparkles,
 } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const SidebarFooterItem: React.FC = () => {
   const { isMobile } = useSidebar();
@@ -35,7 +35,13 @@ const SidebarFooterItem: React.FC = () => {
             <SidebarMenuButton
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-              <UserAvatar height="h-[35px]" width="w-[35px]" />
+              <Avatar className="h-8 w-8 rounded-lg">
+                <AvatarImage
+                  src="https://github.com/shadcn.png"
+                  alt="@shadcn"
+                />
+                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+              </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">Himanshu Chuchra</span>
                 <span className="truncate text-xs">@himanshuchuchra</span>
@@ -50,7 +56,13 @@ const SidebarFooterItem: React.FC = () => {
             sideOffset={4}>
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <UserAvatar height="h-[35px]" width="w-[35px]" />
+                <Avatar className="h-8 w-8 rounded-lg">
+                  <AvatarImage
+                    src="https://github.com/shadcn.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">
                     Himanshu Chuchra
