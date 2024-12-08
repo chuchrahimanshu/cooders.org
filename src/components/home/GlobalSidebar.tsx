@@ -12,6 +12,7 @@ import {
   SidebarMenuItem,
 } from "../ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import SidebarHeaderItem from "../sidebar/SidebarHeaderItem";
 
 const GlobalSidebar: React.FC = () => {
   const items = [
@@ -44,7 +45,9 @@ const GlobalSidebar: React.FC = () => {
 
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader />
+      <SidebarHeader>
+        <SidebarHeaderItem />
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
