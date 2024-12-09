@@ -4,6 +4,7 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
+  SidebarRail,
 } from "../ui/sidebar";
 import SidebarHeaderItem from "../sidebar/SidebarHeaderItem";
 import SidebarFooterItem from "../sidebar/SidebarFooterItem";
@@ -21,6 +22,7 @@ const GlobalSidebar: React.FC = () => {
       <SidebarFooter>
         <SidebarFooterItem />
       </SidebarFooter>
+      <SidebarRail />
     </Sidebar>
   );
 };
